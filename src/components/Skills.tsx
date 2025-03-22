@@ -1,22 +1,11 @@
 
 const Skills = () => {
   const programmingLanguages = [
-    { name: "C", level: 85 },
-    { name: "C++", level: 90 },
-    { name: "Java", level: 80 },
-    { name: "Python", level: 75 },
-    { name: "JavaScript", level: 85 },
-    { name: "Ruby", level: 65 },
-    { name: "SQL", level: 70 },
+    "C", "C++", "Java", "Python", "JavaScript", "Ruby", "SQL"
   ];
 
   const webDevelopment = [
-    { name: "HTML", level: 95 },
-    { name: "CSS", level: 85 },
-    { name: "Node.js", level: 80 },
-    { name: "React.js", level: 85 },
-    { name: "MongoDB", level: 75 },
-    { name: "Electron.js", level: 70 },
+    "HTML", "CSS", "Node.js", "React.js", "MongoDB", "Electron.js"
   ];
 
   return (
@@ -32,26 +21,20 @@ const Skills = () => {
           <div className="w-16 h-1 bg-pacman-yellow mt-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Programming Languages */}
           <div className="glass-card p-6 md:p-8 rounded-2xl animate-slide-up">
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black dark:text-white">
               Programming Languages
             </h3>
-            <div className="space-y-5">
+            <div className="flex flex-wrap justify-center gap-3">
               {programmingLanguages.map((skill) => (
-                <div key={skill.name} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-pacman-yellow rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
+                <span 
+                  key={skill}
+                  className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </div>
@@ -61,20 +44,14 @@ const Skills = () => {
             <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black dark:text-white">
               Web Development
             </h3>
-            <div className="space-y-5">
+            <div className="flex flex-wrap justify-center gap-3">
               {webDevelopment.map((skill) => (
-                <div key={skill.name} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-pacman-blue dark:bg-pacman-cyan rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
+                <span 
+                  key={skill}
+                  className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </div>

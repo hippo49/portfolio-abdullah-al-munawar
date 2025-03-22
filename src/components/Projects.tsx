@@ -1,13 +1,11 @@
 
-import { ExternalLink, Github } from "lucide-react";
-
 const Projects = () => {
   const project = {
     title: "Simple Code Editor",
     description: "A lightweight code editor built with Electron.js and Node.js. Features syntax highlighting, file system integration, and a clean user interface designed for coding efficiency.",
     technologies: ["Electron.js", "Node.js", "JavaScript", "HTML", "CSS"],
-    image: null, // No image provided in requirements
-    github: "https://github.com/hippo49", // Using provided GitHub
+    image: null,
+    github: "https://github.com/hippo49",
   };
 
   return (
@@ -44,7 +42,7 @@ const Projects = () => {
                 
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                    Technologies Used:
+                    Languages Used:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -56,27 +54,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-                
-                <div className="flex space-x-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-pacman-yellow hover:text-black transition-all duration-300 text-sm"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span>View Code</span>
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-transparent border border-black dark:border-white text-black dark:text-white hover:border-pacman-yellow hover:text-pacman-yellow dark:hover:border-pacman-yellow dark:hover:text-pacman-yellow transition-all duration-300 text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Live Demo</span>
-                  </a>
                 </div>
               </div>
             </div>

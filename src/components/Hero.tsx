@@ -1,5 +1,5 @@
 
-import { ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -34,32 +34,38 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-            Computer Science & Engineering Student at Rajshahi University of Engineering & Technology
+            Currently a 3rd year student studying Computer Science & Engineering at Rajshahi University of Engineering & Technology with a passion for creating responsive and useful applications.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <a
-              href="#about"
-              className="px-6 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-pacman-yellow hover:text-black dark:hover:bg-pacman-yellow dark:hover:text-black transition-all duration-300"
+          <div className="flex justify-center space-x-6 mt-6">
+            <a 
+              href="https://github.com/hippo49" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-pacman-yellow hover:text-black transition-all duration-300"
+              aria-label="GitHub"
             >
-              Explore My Work
+              <Github className="w-6 h-6" />
             </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-full bg-transparent border-2 border-black dark:border-white text-black dark:text-white hover:bg-pacman-yellow hover:border-pacman-yellow hover:text-black dark:hover:bg-pacman-yellow dark:hover:border-pacman-yellow dark:hover:text-black transition-all duration-300"
+            <a 
+              href="https://www.linkedin.com/in/munawar-shafi-85386517a" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-pacman-yellow hover:text-black transition-all duration-300"
+              aria-label="LinkedIn"
             >
-              Get In Touch
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a 
+              href="mailto:munawarshafi.ms@gmail.com" 
+              className="p-3 rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-pacman-yellow hover:text-black transition-all duration-300"
+              aria-label="Email"
+            >
+              <Mail className="w-6 h-6" />
             </a>
           </div>
         </div>
       </div>
-      
-      <a
-        href="#about"
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-float"
-      >
-        <ArrowDown className="w-6 h-6 text-black dark:text-white" />
-      </a>
     </section>
   );
 };
