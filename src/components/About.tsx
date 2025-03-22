@@ -41,13 +41,12 @@ const About = () => {
           <div className="relative animate-slide-up" style={{animationDelay: "0.2s"}}>
             <div className="aspect-square rounded-2xl overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-pacman-yellow/20 to-pacman-blue/20 z-10"></div>
-              <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-                <div className="pixel-text text-5xl text-pacman-yellow animate-pulse">AA</div>
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-pacman-yellow rounded-full relative animate-chomp">
+                  <div className="absolute top-1/2 right-1/2 w-2 h-2 bg-black rounded-full"></div>
+                </div>
               </div>
             </div>
-            
-            {/* Pac-Man decoration */}
-            <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-pacman-yellow rounded-full animate-chomp"></div>
           </div>
         </div>
       </div>

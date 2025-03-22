@@ -4,7 +4,7 @@ const Projects = () => {
     title: "Simple Code Editor",
     description: "A lightweight code editor built with Electron.js and Node.js. Features syntax highlighting, file system integration, and a clean user interface designed for coding efficiency.",
     technologies: ["Electron.js", "Node.js", "JavaScript", "HTML", "CSS"],
-    image: null,
+    image: "/lovable-uploads/20167145-faa9-46f6-9edd-f7c168aed981.png",
     github: "https://github.com/hippo49",
   };
 
@@ -25,10 +25,14 @@ const Projects = () => {
           <div className="glass-card overflow-hidden rounded-2xl animate-slide-up">
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Project Image/Preview */}
-              <div className="bg-gradient-to-br from-pacman-yellow/20 to-pacman-blue/20 min-h-[240px] flex items-center justify-center p-6">
-                <div className="w-16 h-16 bg-pacman-yellow rounded-full relative animate-chomp">
-                  <div className="absolute top-1/2 right-1/2 w-2 h-2 bg-black rounded-full"></div>
-                </div>
+              <div className="bg-gradient-to-br from-pacman-yellow/10 to-pacman-blue/10 min-h-[240px] flex items-center justify-center p-4">
+                {project.image && (
+                  <img 
+                    src={project.image} 
+                    alt="Code Editor Screenshot" 
+                    className="w-full h-auto object-cover rounded-lg shadow-md"
+                  />
+                )}
               </div>
               
               {/* Project Details */}
